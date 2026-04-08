@@ -19,7 +19,7 @@ This project is designed to show recruiter-facing evidence that I understand the
 - End-to-end meter-to-cash reconciliation
 
 ## Key files
-- `test-cases/SAP_ISU_Meter_to_Cash_QA_Test_Pack_OpenMRS_Styled.xlsx`
+- `test-cases/SAP_ISU_Meter_to_Cash_QA_Test_Pack.xlsx`
 - `api-testing/meter-reading-api.postman_collection.json`
 - `api-testing/billing-api.postman_collection.json`
 - `docs/test-strategy.md`
