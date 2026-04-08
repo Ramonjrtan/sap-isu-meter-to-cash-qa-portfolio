@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "SAP IS-U Style Meter Reading API Simulation",
+    "_postman_id": "sap-isu-meter-reading-sim",
+    "description": "Sample Postman collection for utilities meter reading intake validation.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Submit Valid Meter Reading",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/meter-readings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "meter-readings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"meterId\": \"MTR-1001\",\n  \"deviceId\": \"DEV-2001\",\n  \"readDate\": \"2026-04-01\",\n  \"readType\": \"Actual\",\n  \"readValueKwh\": 1250.45\n}"
+        }
+      }
+    },
+    {
+      "name": "Submit Duplicate Meter Reading",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/meter-readings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "meter-readings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"meterId\": \"MTR-1001\",\n  \"deviceId\": \"DEV-2001\",\n  \"readDate\": \"2026-04-01\",\n  \"readType\": \"Actual\",\n  \"readValueKwh\": 1250.45\n}"
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://demo-utilities.example.com"
+    }
+  ]
+}

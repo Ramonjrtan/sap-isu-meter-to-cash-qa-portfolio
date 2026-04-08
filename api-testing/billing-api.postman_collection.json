@@ -1,0 +1,95 @@
+{
+  "info": {
+    "name": "SAP IS-U Style Billing API Simulation",
+    "_postman_id": "sap-isu-billing-sim",
+    "description": "Sample Postman collection for billing, invoice generation, and customer account validation.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Run Billing For Active Account",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/billing/run",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "billing",
+            "run"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accountId\": \"ACC-3001\",\n  \"billingPeriod\": \"2026-04\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Generate Invoice",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/invoices",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "invoices"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accountId\": \"ACC-3001\",\n  \"billDocumentId\": \"BILL-3001\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Post Customer Payment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/payments",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "payments"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accountId\": \"ACC-3001\",\n  \"invoiceId\": \"INV-4001\",\n  \"amount\": 150.0\n}"
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://demo-utilities.example.com"
+    }
+  ]
+}

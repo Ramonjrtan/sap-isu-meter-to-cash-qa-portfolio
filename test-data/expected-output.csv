@@ -1,0 +1,5 @@
+scenario_id,description,expected_result
+MR-001,Valid interval read intake,Read stored and marked billable
+BI-001,Standard billing run,Bill total matches tariff and tax rules
+E2E-001,Meter-to-cash happy path,"Read, bill, invoice, and balance remain consistent"
+E2E-006,Post-cutover smoke sample,Migrated accounts behave correctly after go-live

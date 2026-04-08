@@ -1,0 +1,4 @@
+meter_id,device_id,account_id,read_date,read_type,read_value_kwh,status
+MTR-1001,DEV-2001,ACC-3001,2026-04-01,Actual,1250.45,Accepted
+MTR-1002,DEV-2002,ACC-3002,2026-04-01,Estimated,980.0,Estimated
+MTR-1003,DEV-2003,ACC-3003,2026-04-01,Actual,999999.0,Exception

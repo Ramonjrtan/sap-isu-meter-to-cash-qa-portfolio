@@ -1,0 +1,4 @@
+account_id,billing_period,consumption_kwh,tariff_code,minimum_charge,tax_rate,expected_bill_amount
+ACC-3001,2026-04,350,Residential-A,50,0.12,392.0
+ACC-3002,2026-04,0,Residential-A,50,0.12,56.0
+ACC-3003,2026-04,1250,Commercial-B,100,0.12,1540.0
